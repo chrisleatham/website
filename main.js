@@ -2,11 +2,7 @@ var myApp = angular.module('myApp', ['ui.router']);
 
 //Controllers for each page
 myApp.config(function($stateProvider) {
-    $stateProvider.state('home', {
-        url: '/',
-        templateUrl: 'pages/home.html',
-        controller: 'HomeController',
-    })
+    $stateProvider
     .state('about', {
         url: '/about',
         templateUrl: 'pages/about.html',

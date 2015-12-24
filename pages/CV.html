@@ -1,0 +1,28 @@
+<div>
+
+	<div class='container' id='workDiv'>
+		<img class='img-responsive animated zoomInDown' src='img/CV.jpg'>
+		<div class='animated zoomInUp'>
+			<h1>Work Experience</h1>
+			<div ng-repeat='work in workInfo' class='col-xs-12' id='work'>
+				<h2 class='workCompany'>{{work.Company}}</h2>
+				<h3 class='workPosition'>{{work.Position}}</h3>
+				<p class='workDescription'>{{work.Description}}</p>
+				<p class='workLocation'>{{work.Where}}</p>
+				<p class='workDate'>{{work.When}}</p>
+			</div>
+		</div>
+	</div>
+	<img class='img-responsive' src='img/divide.jpeg'>
+	<div class='container animated zoomInUp' id='activityDiv'>
+		<h1>Activities</h1>
+		<div ng-repeat='activity in activityInfo' class='col-xs-12' id='work'>
+			<h2 class='activityAct'>{{activity.Activity}}</h2>
+			<h3 class='activityTitle'>{{activity.Title}}</h3>
+			<p class='activityDescription'>{{activity.Description}}</p>
+			<p class='activityLocation'>{{activity.Where}}</p>
+			<p class='activityDate'>{{activity.When}}</p>
+		</div>
+	</div>
+
+</div>
