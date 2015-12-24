@@ -1,8 +1,11 @@
 var myApp = angular.module('myApp', ['ui.router']);
 
-//Controllers for each page
 myApp.config(function($stateProvider) {
-    $stateProvider
+    $stateProvider.state('home', {
+        url: '/',
+        templateUrl: 'pages/home.html',
+        controller: 'HomeController',
+    })
     .state('about', {
         url: '/about',
         templateUrl: 'pages/about.html',
@@ -38,21 +41,12 @@ myApp.config(function($stateProvider) {
 
 })
 
-//Reading in JSONS for classes
 .controller('EducationController', function($scope, $http) {
-    $http.get('data/classes.JSON').success(function(response) {
+    $http.get('data/related-classes.JSON').success(function(response) {
         $scope.courseInfo = response;
     })
-
 })
 
-.directive('popover', function(){
-    return function(scope, elem) {
-        elem.popover();
-    }
-});
-
-//Reading in JSONS for work
 .controller('CVController', function($scope, $http) {
     $http.get('data/work.JSON').success(function(response) {
         $scope.workInfo = response;
@@ -69,3 +63,9 @@ myApp.config(function($stateProvider) {
 .controller('ContactController', function($scope) {
 
 }); 
+
+.directive('popover', function(){
+    return function(scope, elem) {
+        elem.popover();
+    }
+});
