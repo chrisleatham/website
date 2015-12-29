@@ -12,31 +12,29 @@
             </div>
             <img class='img-responsive' src='img/divide.jpeg'>
         </div>
-        <h2>Classes</h2>
-        <!--The form to determine what kind of class is shown-->
-        <form id='classForm'>
-            <div class='form-group'>
-                <span class='classButton'>
-                    <input type='radio' ng-model='classCategory' value='all' id='all' ng-checked='true'/>
-                    <label for='all'>All</label>
-                </span>
-                <span class='classButton'>
-                    <input type='radio' ng-model='classCategory' value='info' id='info'/>
-                    <label for='info'>Informatics</label>
-                </span>
-                <span class='classButton'>
-                    <input type='radio' ng-model='classCategory' value='cse' id='cse'/>
-                    <label for='cse'>Computer Science</label>
-                </span>
-                
+        <h1>Related Classes</h1>
+        <div class='row' id='classes'>
+            <div ng-repeat='course in courseInfo' class='course col-xs-6 col-sm-4 col-md-2'>
+                <div class='courses'>
+                    <h2 class='courseTitle'>{{course.Class + ' ' + course.Number}}</h2>
+                    <h3 class='courseDetails'>{{course.Title}}</h3>
+                    <p class='courseGrades'>{{course.Quarter + ' ' + course.Year}}</p>
+                    <p class='courseGrades'>{{'GPA: ' + course.GPA}}</p>
+                </div>
             </div>
-        </form>
-
-        <div class='row'>
-            <!--Puts the different courses taken in the DOM, also creates the popover element-->
-            <div ng-repeat='class in courseInfo' ng-if ='(classCategory.toUpperCase() == class.Class || classCategory.toUpperCase() == "ALL")' class='courses col-xs-6 col-sm-4 col-md-3'>
-                <a popover tabindex='0' class='course btn btn-default' role='button' data-toggle='popover' data-placement='top' data-trigger='focus' data-html='true' data-original-title='{{class.Class + " " + class.Number}}' data-content='<p class="popoverCourseTitle">{{class.Class_Title}}</p><p class="popoverCourseTaken">{{"Taken: " + class.Quarter + " " + class.Year}}</p><p class="popoverCourseBody">{{class.Description}}</p>'>{{class.Class + ' ' + class.Number}}</a>
+            <img class='img-responsive' src='img/divide.jpeg'>
+        </div>
+        <h1> Other Classes </h1>
+        <div class='row' id='classes'>
+            <div ng-repeat='course in otherInfo' class='course col-xs-6 col-sm-4 col-md-2'>
+                <div class='courses'>
+                    <h2 class='courseTitle'>{{course.Class + ' ' + course.Number}}</h2>
+                    <h3 class='courseDetails'>{{course.Title}}</h3>
+                    <p class='courseGrades'>{{course.Quarter + ' ' + course.Year}}</p>
+                    <p class='courseGrades'>{{'GPA: ' + course.GPA}}</p>
+                </div>
             </div>
+            <img class='img-responsive' src='img/divide.jpeg'>
         </div>
     </div>
 </div>

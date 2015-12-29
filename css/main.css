@@ -1,16 +1,18 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:600);
 
+/* Top Image */
 #title {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
+/* Nav Bar */
 .navbar-header {
     margin: 0 auto;
     position: relative;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%); 
 }
 
 .nav li {
@@ -22,13 +24,13 @@
 }
 
 #navbarText {
-	font-family: 'Raleway';
-	font-size: 2em;
+    font-family: 'Raleway';
+    font-size: 2em;
     text-align: center;
 }
 
 #navbarText a {
-	color: black;
+    color: black;
 }
 
 #logo {
@@ -38,9 +40,15 @@
     margin-right: auto;
 }
 
+/* Bullet points */
 #school {
     list-style-image: url(../img/bullet.svg);
 
+}
+
+/* Text and images */
+#me {
+    border-radius: 25px;
 }
 
 h1 {
@@ -68,6 +76,7 @@ img {
     margin-right: auto;
 }
 
+/* Phone adaption */
 @media only screen and (min-width: 786px) {
     #navbarText {
         font-size: 4em;
