@@ -16,34 +16,24 @@
         <div class='row' id='classes'>
             <div ng-repeat='course in courseInfo' class='course col-xs-6 col-sm-4 col-md-2'>
                 <div class='courses'>
-                    <ul>
-                        <li>
-                            <h2 class='courseTitle'>{{course.Class + ' ' + course.Number}}</h2>
-                            <h3 class='courseDetails'>{{course.Title}}</h3>
-                            <p class='courseGrades'>{{course.Quarter + ' ' + course.Year}}</p>
-                            <p class='courseGrades'>{{'GPA: ' + course.GPA}}</p>
-                        </li>
-                    </ul>
-                    <!-- <h2 class='courseTitle'>{{course.Class + ' ' + course.Number}}</h2>
+                    <h2 class='courseTitle'>{{course.Class + ' ' + course.Number}}</h2>
                     <h3 class='courseDetails'>{{course.Title}}</h3>
                     <p class='courseGrades'>{{course.Quarter + ' ' + course.Year}}</p>
-                    <p class='courseGrades'>{{'GPA: ' + course.GPA}}</p> -->
+                    <p class='courseGrades'>{{'GPA: ' + course.GPA}}</p>
                 </div>
             </div>
             <img class='img-responsive' src='img/divide.jpeg'>
         </div>
         <h1> Other Classes </h1>
         <div class='row' id='classes'>
-            <div ng-repeat='course in otherInfo' class='course col-xs-6 col-sm-4 col-md-2'>
+            <div ng-repeat='course in otherInfo' class='course col-xs-3 col-sm-3 col-md-2'>
                 <div class='courses'>
-                    <ul>
-                        <li>
+                    
                             <h2 class='courseTitle'>{{course.Class + ' ' + course.Number}}</h2>
                             <h3 class='courseDetails'>{{course.Title}}</h3>
                             <p class='courseGrades'>{{course.Quarter + ' ' + course.Year}}</p>
                             <p class='courseGrades'>{{'GPA: ' + course.GPA}}</p>
-                        </li>
-                    </ul>
+                        
                 </div>
             </div>
             <img class='img-responsive' src='img/divide.jpeg'>
