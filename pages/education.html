@@ -18,7 +18,10 @@
                 <div class='courses'>
                     <ul>
                         <li>
-                            <a href="/education" data-toggle="popover" title="{{course.Class + ' ' + course.Number}}" data-content="test content">{{course.Class + ' ' + course.Number}}</a>
+                            <h2 class='courseTitle'>{{course.Class + ' ' + course.Number}}</h2>
+                            <h3 class='courseDetails'>{{course.Title}}</h3>
+                            <p class='courseGrades'>{{course.Quarter + ' ' + course.Year}}</p>
+                            <p class='courseGrades'>{{'GPA: ' + course.GPA}}</p>
                         </li>
                     </ul>
                     <!-- <h2 class='courseTitle'>{{course.Class + ' ' + course.Number}}</h2>
@@ -33,10 +36,14 @@
         <div class='row' id='classes'>
             <div ng-repeat='course in otherInfo' class='course col-xs-6 col-sm-4 col-md-2'>
                 <div class='courses'>
-                    <h2 class='courseTitle'>{{course.Class + ' ' + course.Number}}</h2>
-                    <h3 class='courseDetails'>{{course.Title}}</h3>
-                    <p class='courseGrades'>{{course.Quarter + ' ' + course.Year}}</p>
-                    <p class='courseGrades'>{{'GPA: ' + course.GPA}}</p>
+                    <ul>
+                        <li>
+                            <h2 class='courseTitle'>{{course.Class + ' ' + course.Number}}</h2>
+                            <h3 class='courseDetails'>{{course.Title}}</h3>
+                            <p class='courseGrades'>{{course.Quarter + ' ' + course.Year}}</p>
+                            <p class='courseGrades'>{{'GPA: ' + course.GPA}}</p>
+                        </li>
+                    </ul>
                 </div>
             </div>
             <img class='img-responsive' src='img/divide.jpeg'>

@@ -44,6 +44,7 @@ myApp.config(function($stateProvider) {
 
 //Reading in JSONS for classes
 .controller('EducationController', function($scope, $http) {
+    
     $http.get('data/related-classes.JSON').success(function(response) {
         $scope.courseInfo = response;
     })
