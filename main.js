@@ -12,11 +12,11 @@ myApp.config(function($stateProvider) {
         templateUrl: 'pages/about.html',
         controller: 'AboutController',
     })
-    .state('education', {
-        url: '/education',
-        templateUrl: 'pages/education.html',
-        controller: 'EducationController',
-    })
+    // .state('education', {
+    //     url: '/education',
+    //     templateUrl: 'pages/education.html',
+    //     controller: 'EducationController',
+    // })
     .state('CV', {
         url: '/CV',
         templateUrl: 'pages/CV.html',
@@ -43,15 +43,15 @@ myApp.config(function($stateProvider) {
 })
 
 //Reading in JSONS for classes
-.controller('EducationController', function($scope, $http) {
+// .controller('EducationController', function($scope, $http) {
     
-    $http.get('data/related-classes.JSON').success(function(response) {
-        $scope.courseInfo = response;
-    })
-    $http.get('data/non-related.JSON').success(function(response) {
-        $scope.otherInfo = response;
-    })
-})
+//     $http.get('data/related-classes.JSON').success(function(response) {
+//         $scope.courseInfo = response;
+//     })
+//     $http.get('data/non-related.JSON').success(function(response) {
+//         $scope.otherInfo = response;
+//     })
+// })
 
 //Reading in JSONS for work
 .controller('CVController', function($scope, $http) {
