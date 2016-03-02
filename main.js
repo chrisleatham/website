@@ -1,5 +1,7 @@
 var myApp = angular.module('myApp', ['ui.router']);
 
+
+
 //Controllers for each page
 myApp.config(function($stateProvider) {
     $stateProvider.state('home', {
